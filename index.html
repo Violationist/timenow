@@ -2,13 +2,19 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
         body {
+            text-align: center;
             color: #077568;
             font-family: 'Quicksand', sans-serif;
         }
     </style>
-    <p>HKT Time: <span id="datetime"></span></p>
+    <p><b>香港標準時間</b> <span id="hktime"></span></p>
     <script>
         var dt = new Date();
-        document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +"    "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))+":"+ (("0"+dt.getSeconds()).slice(-2));
+        document.getElementById("hktime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +"    "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))+":"+ (("0"+dt.getSeconds()).slice(-2));
+    </script>
+    <p><b>網頁時間</b> <span id="uktime"></span></p>
+    <script>
+        var dt = new Date();
+        document.getElementById("uktime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +"    "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))+":"+ (("0"+dt.getSeconds()).slice(-2));
     </script>
 </html>
